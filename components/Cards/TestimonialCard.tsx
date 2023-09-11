@@ -15,6 +15,7 @@ const TestimonialCard = () => {
           src="/fake-data/user.png"
           height={40}
           width={40}
+          alt="user image"
           className="rounded-full"
         />
         <div className="">
