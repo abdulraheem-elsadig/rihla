@@ -2,26 +2,142 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+li {
+  list-style: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+a,
+img,
+input,
+span,
+button {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+input {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #f8f8f8 !important;
+  scroll-behavior: smooth;
+  line-height: 190%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsl(0deg, 0%, 98%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary-light);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-dark-blue);
+}
+
+p {
+  margin: 0;
+  line-height: 150%;
+}
+
+/* Typography */
+
+body {
+  color: #333;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 120%;
+  max-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.btn {
+  text-align: center;
+}
+.btn__solid {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  font-weight: bold;
+  padding: 0 12px;
+  border-radius: 4px;
+  height: 32px;
+}
+.btn__outline {
+  color: var(--color-blue);
+  border: solid 1px var(--color-blue);
+  padding: 0 12px;
+  border-radius: 4px;
+  height: 32px;
+}
+
+.custom-shadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+/* Media Querys
+ */
+
+@media screen and (min-width: 767px) {
+  .section {
+    padding: 120px 0;
+  }
+  .title {
+    font-size: 32px;
+    line-height: 120%;
+    max-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .section {
+    padding: 140px 0;
+  }
+  .title {
+    font-size: 40px;
+    max-width: 600px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
 }
